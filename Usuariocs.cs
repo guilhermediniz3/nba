@@ -37,14 +37,14 @@ namespace NBA3
             {
                 conexao.Open();
                 
-                MySqlCommand comando = new MySqlCommand("select * from usuario", conexao);
+                MySqlCommand comando = new MySqlCommand("select * from usuario where nome = 'garrafinha'", conexao);
                 MySqlDataReader reader = comando.ExecuteReader();
-
+               
                 while (reader.Read()) { 
 
-                    string usuario = (string)reader[0];
+                   string usuario = (string)reader[0];
                     MessageBox.Show((String)reader[0]);
-                    MessageBox.Show(usuario + "teste sucesso");
+                   MessageBox.Show(usuario + "teste sucesso");
 
                 }
 
@@ -89,6 +89,112 @@ namespace NBA3
             {
                 MessageBox.Show("ERRO DE CONEXAO" + err.Message, "erro"); 
             }
+        }
+
+        private void btnteste_Click(object sender, EventArgs e)
+        {
+
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+
+
+            MySqlConnection conexao = new MySqlConnection(conn);
+            try
+            {
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand("select * from usuario where nome = 'garrafinha'", conexao);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string usuario = (string)reader[0];
+                    string senha = (string)reader[1];
+                    lblresultado.Text = String.Format(usuario);
+                    lblsenha.Text = ((string)senha);
+
+                }
+
+
+            }
+
+
+
+            catch (MySqlException msqle)
+            {
+                MessageBox.Show("ERRO DE CONEXAO" + msqle.Message, "erro");
+
+            }
+            finally
+            {
+                conexao.Close();
+
+
+            }
+
+
+
+
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btntime_Click(object sender, EventArgs e)
+        {
+            
+
+        }
+
+        private void lista_Click(object sender, EventArgs e)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+
+            MySqlConnection conexao = new MySqlConnection(conn);
+            try
+            {
+                conexao.Open();
+
+                MySqlCommand comando = new MySqlCommand("select * from club", conexao);
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    string nome_club= (string)reader[1];
+                    comboBox1.Items.Add(nome_club);
+                    comboBox2.Items.Add(nome_club);
+
+                }
+            }
+            catch (MySqlException msqle)
+            {
+                MessageBox.Show("ERRO DE CONEXAO" + msqle.Message, "erro");
+
+            }
+            finally
+            {
+                conexao.Close();
+
+
+            }
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String Time2Selecionado = comboBox1.SelectedItem.ToString();
+            Console.WriteLine(Time2Selecionado);
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            String Time1Selecionado = comboBox2.SelectedItem.ToString();
         }
     }
 }

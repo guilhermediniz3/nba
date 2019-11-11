@@ -20,7 +20,7 @@ namespace NBA3
         private void timeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form3 newForm3 = new Form3();
-            this.Hide(); // use dessa maneira.
+            this.Hide(); 
             newForm3.ShowDialog();
         }
 
@@ -29,15 +29,30 @@ namespace NBA3
         private void jogosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Jogos newjogos = new Jogos();
-            this.Hide(); // use dessa maneira.
+            this.Hide(); 
             newjogos.ShowDialog();
         }
 
         private void usuáriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Usuariocs newUsuariocs = new Usuariocs();
-            this.Hide(); // use dessa maneira.
-            newUsuariocs.ShowDialog();
+           // Usuariocs newUsuariocs = new Usuariocs();
+           // this.Hide(); // use dessa maneira.
+           // newUsuariocs.ShowDialog();
+
+
+
+            Usuariocs newMDIChild = new Usuariocs();
+            // form filho
+            newMDIChild.MdiParent = this;
+            
+            newMDIChild.Show();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                
+         
+		this.Close();
         }
     }
 }

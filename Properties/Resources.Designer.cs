@@ -73,6 +73,16 @@ namespace NBA3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4fd0548bf81d7a518659ebcaf79537bc {
+            get {
+                object obj = ResourceManager.GetObject("4fd0548bf81d7a518659ebcaf79537bc", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap bola {
             get {
                 object obj = ResourceManager.GetObject("bola", resourceCulture);
@@ -123,9 +133,49 @@ namespace NBA3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fundo_poligonal_liso_tons_azul_escuro_e_indigo_7196_604 {
+            get {
+                object obj = ResourceManager.GetObject("fundo-poligonal-liso-tons-azul-escuro-e-indigo_7196-604", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fundo_poligonal_liso_tons_azul_escuro_e_indigo_7196_6041 {
+            get {
+                object obj = ResourceManager.GetObject("fundo-poligonal-liso-tons-azul-escuro-e-indigo_7196-6041", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icone_cadastro_png_7 {
             get {
                 object obj = ResourceManager.GetObject("icone-cadastro-png-7", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap images__1_ {
+            get {
+                object obj = ResourceManager.GetObject("images (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap liga {
+            get {
+                object obj = ResourceManager.GetObject("liga", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,6 +203,16 @@ namespace NBA3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NBA_Logo_Wallpaper_02 {
+            get {
+                object obj = ResourceManager.GetObject("NBA-Logo-Wallpaper-02", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap nba3 {
             get {
                 object obj = ResourceManager.GetObject("nba3", resourceCulture);
@@ -163,9 +223,39 @@ namespace NBA3.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap nbaa {
+            get {
+                object obj = ResourceManager.GetObject("nbaa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap resultado {
+            get {
+                object obj = ResourceManager.GetObject("resultado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap simbolo_de_icone_de_acesso_chave_de_seguranca_53876_74634 {
             get {
                 object obj = ResourceManager.GetObject("simbolo-de-icone-de-acesso-chave-de-seguranca_53876-74634", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trofeu {
+            get {
+                object obj = ResourceManager.GetObject("trofeu", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
