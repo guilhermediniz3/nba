@@ -28,18 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem("");
             this.btnbotao = new System.Windows.Forms.Button();
-            this.butao = new System.Windows.Forms.Button();
+            this.inserir = new System.Windows.Forms.Button();
             this.btnteste = new System.Windows.Forms.Button();
             this.lbltime = new System.Windows.Forms.Label();
             this.lblresultado = new System.Windows.Forms.Label();
             this.lblsenha = new System.Windows.Forms.Label();
             this.lbltime2 = new System.Windows.Forms.Label();
             this.lbltime1 = new System.Windows.Forms.Label();
-            this.lista = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.lsttime1 = new System.Windows.Forms.ListView();
             this.lblvitoriaporcent = new System.Windows.Forms.Label();
             this.lblTimeB = new System.Windows.Forms.Label();
             this.lbltimeA = new System.Windows.Forms.Label();
@@ -53,14 +49,15 @@
             this.lblindicetimeA = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btncalcular = new System.Windows.Forms.Button();
             this.grbcampeonato.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnbotao
             // 
-            this.btnbotao.Location = new System.Drawing.Point(474, 164);
+            this.btnbotao.Location = new System.Drawing.Point(113, 21);
             this.btnbotao.Name = "btnbotao";
             this.btnbotao.Size = new System.Drawing.Size(75, 23);
             this.btnbotao.TabIndex = 10;
@@ -68,19 +65,19 @@
             this.btnbotao.UseVisualStyleBackColor = true;
             this.btnbotao.Click += new System.EventHandler(this.btnbotao_Click);
             // 
-            // butao
+            // inserir
             // 
-            this.butao.Location = new System.Drawing.Point(374, 164);
-            this.butao.Name = "butao";
-            this.butao.Size = new System.Drawing.Size(75, 23);
-            this.butao.TabIndex = 11;
-            this.butao.Text = "button1";
-            this.butao.UseVisualStyleBackColor = true;
-            this.butao.Click += new System.EventHandler(this.butao_Click);
+            this.inserir.Location = new System.Drawing.Point(22, 21);
+            this.inserir.Name = "inserir";
+            this.inserir.Size = new System.Drawing.Size(75, 23);
+            this.inserir.TabIndex = 11;
+            this.inserir.Text = "inserir";
+            this.inserir.UseVisualStyleBackColor = true;
+            this.inserir.Click += new System.EventHandler(this.butao_Click);
             // 
             // btnteste
             // 
-            this.btnteste.Location = new System.Drawing.Point(474, 103);
+            this.btnteste.Location = new System.Drawing.Point(210, 21);
             this.btnteste.Name = "btnteste";
             this.btnteste.Size = new System.Drawing.Size(75, 23);
             this.btnteste.TabIndex = 12;
@@ -112,7 +109,7 @@
             // 
             this.lblsenha.AutoSize = true;
             this.lblsenha.ForeColor = System.Drawing.Color.Navy;
-            this.lblsenha.Location = new System.Drawing.Point(275, 348);
+            this.lblsenha.Location = new System.Drawing.Point(471, 361);
             this.lblsenha.Name = "lblsenha";
             this.lblsenha.Size = new System.Drawing.Size(38, 13);
             this.lblsenha.TabIndex = 15;
@@ -122,7 +119,7 @@
             // lbltime2
             // 
             this.lbltime2.AutoSize = true;
-            this.lbltime2.Location = new System.Drawing.Point(293, 19);
+            this.lbltime2.Location = new System.Drawing.Point(242, 87);
             this.lbltime2.Name = "lbltime2";
             this.lbltime2.Size = new System.Drawing.Size(76, 13);
             this.lbltime2.TabIndex = 19;
@@ -131,41 +128,11 @@
             // lbltime1
             // 
             this.lbltime1.AutoSize = true;
-            this.lbltime1.Location = new System.Drawing.Point(62, 19);
+            this.lbltime1.Location = new System.Drawing.Point(48, 87);
             this.lbltime1.Name = "lbltime1";
             this.lbltime1.Size = new System.Drawing.Size(70, 13);
             this.lbltime1.TabIndex = 20;
             this.lbltime1.Text = "Primeiro Time";
-            // 
-            // lista
-            // 
-            this.lista.Location = new System.Drawing.Point(374, 103);
-            this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(75, 23);
-            this.lista.TabIndex = 21;
-            this.lista.Text = "lista";
-            this.lista.UseVisualStyleBackColor = true;
-            this.lista.Click += new System.EventHandler(this.lista_Click);
-            // 
-            // lsttime1
-            // 
-            this.lsttime1.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.lsttime1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.lsttime1.Cursor = System.Windows.Forms.Cursors.AppStarting;
-            this.lsttime1.FullRowSelect = true;
-            listViewItem3.Checked = true;
-            listViewItem3.StateImageIndex = 1;
-            this.lsttime1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem3});
-            this.lsttime1.LabelWrap = false;
-            this.lsttime1.Location = new System.Drawing.Point(374, 200);
-            this.lsttime1.Name = "lsttime1";
-            this.lsttime1.Size = new System.Drawing.Size(121, 176);
-            this.lsttime1.TabIndex = 17;
-            this.lsttime1.UseCompatibleStateImageBehavior = false;
-            this.lsttime1.View = System.Windows.Forms.View.List;
-            this.lsttime1.VirtualListSize = 10;
             // 
             // lblvitoriaporcent
             // 
@@ -208,7 +175,8 @@
             this.grbcampeonato.Controls.Add(this.lblTimeB);
             this.grbcampeonato.Controls.Add(this.lblindicetimeA);
             this.grbcampeonato.Controls.Add(this.label1);
-            this.grbcampeonato.Location = new System.Drawing.Point(54, 81);
+            this.grbcampeonato.ForeColor = System.Drawing.Color.Black;
+            this.grbcampeonato.Location = new System.Drawing.Point(30, 134);
             this.grbcampeonato.Name = "grbcampeonato";
             this.grbcampeonato.Size = new System.Drawing.Size(314, 250);
             this.grbcampeonato.TabIndex = 25;
@@ -290,47 +258,57 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(215, 348);
+            this.label9.Location = new System.Drawing.Point(487, 48);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(35, 13);
             this.label9.TabIndex = 32;
             this.label9.Text = "label9";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(296, 47);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 34;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(65, 47);
+            this.comboBox2.Location = new System.Drawing.Point(213, 103);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
-            this.comboBox2.TabIndex = 35;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.comboBox2.TabIndex = 34;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(30, 103);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 35;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            // 
+            // btncalcular
+            // 
+            this.btncalcular.Location = new System.Drawing.Point(364, 103);
+            this.btncalcular.Name = "btncalcular";
+            this.btncalcular.Size = new System.Drawing.Size(75, 23);
+            this.btncalcular.TabIndex = 36;
+            this.btncalcular.Text = "Calcular";
+            this.btncalcular.UseVisualStyleBackColor = true;
+            this.btncalcular.Click += new System.EventHandler(this.btncalcular_Click);
             // 
             // Usuariocs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlueViolet;
             this.ClientSize = new System.Drawing.Size(587, 409);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.btncalcular);
             this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.grbcampeonato);
-            this.Controls.Add(this.lista);
             this.Controls.Add(this.lbltime1);
             this.Controls.Add(this.lbltime2);
-            this.Controls.Add(this.lsttime1);
             this.Controls.Add(this.lblsenha);
             this.Controls.Add(this.lbltime);
             this.Controls.Add(this.btnteste);
-            this.Controls.Add(this.butao);
+            this.Controls.Add(this.inserir);
             this.Controls.Add(this.btnbotao);
             this.ForeColor = System.Drawing.Color.Black;
             this.Name = "Usuariocs";
@@ -346,16 +324,13 @@
 
         #endregion
         private System.Windows.Forms.Button btnbotao;
-        private System.Windows.Forms.Button butao;
+        private System.Windows.Forms.Button inserir;
         private System.Windows.Forms.Button btnteste;
         private System.Windows.Forms.Label lbltime;
         private System.Windows.Forms.Label lblresultado;
         private System.Windows.Forms.Label lblsenha;
         private System.Windows.Forms.Label lbltime2;
         private System.Windows.Forms.Label lbltime1;
-        private System.Windows.Forms.Button lista;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ListView lsttime1;
         private System.Windows.Forms.Label lblvitoriaporcent;
         private System.Windows.Forms.Label lblTimeB;
         private System.Windows.Forms.Label lbltimeA;
@@ -369,7 +344,8 @@
         private System.Windows.Forms.Label lblindicetimeA;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btncalcular;
     }
 }

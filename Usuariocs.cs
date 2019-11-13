@@ -16,6 +16,8 @@ namespace NBA3
         public Usuariocs()
         {
             InitializeComponent();
+
+            populateComboboxes();
         }
         
 
@@ -111,7 +113,6 @@ namespace NBA3
                     string senha = (string)reader[1];
                     lblresultado.Text = String.Format(usuario);
                     lblsenha.Text = ((string)senha);
-
                 }
 
 
@@ -153,7 +154,7 @@ namespace NBA3
 
         }
 
-        private void lista_Click(object sender, EventArgs e)
+        private void populateComboboxes()
         {
             string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
 
@@ -167,9 +168,9 @@ namespace NBA3
 
                 while (reader.Read())
                 {
-                    string nome_club= (string)reader[1];
-                    comboBox1.Items.Add(nome_club);
+                    string nome_club = (string)reader[1];
                     comboBox2.Items.Add(nome_club);
+                    comboBox1.Items.Add(nome_club);
 
                 }
             }
@@ -188,13 +189,47 @@ namespace NBA3
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String Time2Selecionado = comboBox1.SelectedItem.ToString();
-            Console.WriteLine(Time2Selecionado);
+            String Time2Selecionado = comboBox2.SelectedItem.ToString();
+            
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            String Time1Selecionado = comboBox2.SelectedItem.ToString();
+            String Time1Selecionado = comboBox1.SelectedItem.ToString();
+        }
+
+        private void btncalcular_Click(object sender, EventArgs e)
+        {
+            string conn = ConfigurationManager.ConnectionStrings["MySQLConnectionString"].ToString();
+
+            MySqlConnection conexao = new MySqlConnection(conn);
+            try
+            {
+                conexao.Open();
+                String Time1Selecionado = comboBox1.SelectedItem.ToString();
+                
+                MySqlCommand comando = new MySqlCommand($"select nome_club,sum((pts + ast +stl + blk) - (fg3a + fga) -  (fta - ftm) + (turnover * 2)) as eficiencia from club, jogador, resultado, estadio where estadio.id_estadio = resultado.id_estadio and jogador.id_jogador = resultado.id_jogador and club.id_club = jogador.id_club and resultado.id_resultado = jogador.id_jogador and nome_club = '{Time1Selecionado}'", conexao);
+                MySqlDataReader reader = comando.ExecuteReader();
+               
+                while (reader.Read())
+                {
+                    //string nome_club = (string)reader[1];
+                    double eficiencia = (double)reader[1];
+                    lblindicetimeA.Text =( eficiencia.ToString());
+                
+                }
+            }
+            catch (MySqlException msqle)
+            {
+                MessageBox.Show("ERRO DE CONEXAO" + msqle.Message, "erro");
+
+            }
+            finally
+            {
+                conexao.Close();
+
+
+            }
         }
     }
 }

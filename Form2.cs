@@ -50,9 +50,11 @@ namespace NBA3
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                
-         
-		this.Close();
+
+           System.Threading.Thread.CurrentThread.Abort();
+
+        this.Close();
+          
         }
     }
 }
