@@ -42,12 +42,10 @@
             this.grbcampeonato = new System.Windows.Forms.GroupBox();
             this.lblvalorindiceTimeB = new System.Windows.Forms.Label();
             this.lblindicetimeB = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblporcentagemB = new System.Windows.Forms.Label();
             this.lblvalorindiceTimeA = new System.Windows.Forms.Label();
             this.lblindicetimeA = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblporcentagemA = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -166,15 +164,13 @@
             this.grbcampeonato.Controls.Add(this.lblvalorindiceTimeB);
             this.grbcampeonato.Controls.Add(this.lblindicetimeB);
             this.grbcampeonato.Controls.Add(this.lblvitoriaporcent);
-            this.grbcampeonato.Controls.Add(this.label7);
-            this.grbcampeonato.Controls.Add(this.label8);
             this.grbcampeonato.Controls.Add(this.lbltimeA);
-            this.grbcampeonato.Controls.Add(this.label4);
+            this.grbcampeonato.Controls.Add(this.lblporcentagemB);
             this.grbcampeonato.Controls.Add(this.lblvalorindiceTimeA);
             this.grbcampeonato.Controls.Add(this.lblresultado);
             this.grbcampeonato.Controls.Add(this.lblTimeB);
             this.grbcampeonato.Controls.Add(this.lblindicetimeA);
-            this.grbcampeonato.Controls.Add(this.label1);
+            this.grbcampeonato.Controls.Add(this.lblporcentagemA);
             this.grbcampeonato.ForeColor = System.Drawing.Color.Black;
             this.grbcampeonato.Location = new System.Drawing.Point(30, 134);
             this.grbcampeonato.Name = "grbcampeonato";
@@ -201,32 +197,15 @@
             this.lblindicetimeB.TabIndex = 32;
             this.lblindicetimeB.Text = "indice";
             // 
-            // label7
+            // lblporcentagemB
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(240, 83);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(15, 13);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "%";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(113, 83);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(15, 13);
-            this.label8.TabIndex = 31;
-            this.label8.Text = "%";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(221, 83);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(13, 13);
-            this.label4.TabIndex = 27;
-            this.label4.Text = "0";
+            this.lblporcentagemB.AutoSize = true;
+            this.lblporcentagemB.Location = new System.Drawing.Point(221, 83);
+            this.lblporcentagemB.Name = "lblporcentagemB";
+            this.lblporcentagemB.Size = new System.Drawing.Size(13, 13);
+            this.lblporcentagemB.TabIndex = 27;
+            this.lblporcentagemB.Text = "0";
+            this.lblporcentagemB.Click += new System.EventHandler(this.label4_Click);
             // 
             // lblvalorindiceTimeA
             // 
@@ -246,14 +225,14 @@
             this.lblindicetimeA.TabIndex = 28;
             this.lblindicetimeA.Text = "indice";
             // 
-            // label1
+            // lblporcentagemA
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 83);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(13, 13);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "0";
+            this.lblporcentagemA.AutoSize = true;
+            this.lblporcentagemA.Location = new System.Drawing.Point(94, 83);
+            this.lblporcentagemA.Name = "lblporcentagemA";
+            this.lblporcentagemA.Size = new System.Drawing.Size(13, 13);
+            this.lblporcentagemA.TabIndex = 26;
+            this.lblporcentagemA.Text = "0";
             // 
             // label9
             // 
@@ -337,12 +316,10 @@
         private System.Windows.Forms.GroupBox grbcampeonato;
         private System.Windows.Forms.Label lblvalorindiceTimeB;
         private System.Windows.Forms.Label lblindicetimeB;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblporcentagemB;
         private System.Windows.Forms.Label lblvalorindiceTimeA;
         private System.Windows.Forms.Label lblindicetimeA;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblporcentagemA;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
